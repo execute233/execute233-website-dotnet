@@ -1,0 +1,13 @@
+﻿@page "StatusCode/{statusCode:int:range(100,600)}"
+@model StatusCodeModel
+@section InnerStyles {
+	<style> html { text-align: center; } </style>
+}
+@section HeadAddition {
+	<meta name="robots" content="noindex" />
+}
+@section Header {
+	<h1>@Model.Title</h1>
+}
+<h2>@Model.Description</h2>
+<div>您请求的资源路径：@Model.OriginalPathAndQuery</div>
